@@ -15,6 +15,7 @@ public class ProductService {
         this.repo = repo;
     }
 
+    @SuppressWarnings("null")
     public Product save(Product product) {
         return repo.save(product);
     }
