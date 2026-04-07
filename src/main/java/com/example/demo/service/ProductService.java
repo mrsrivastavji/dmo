@@ -24,6 +24,7 @@ public class ProductService {
         return repo.findAll();
     }
 
+    @SuppressWarnings("null")
     public void delete(Long id) {
         repo.deleteById(id);
     }

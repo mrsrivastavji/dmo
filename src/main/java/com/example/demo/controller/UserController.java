@@ -17,6 +17,7 @@ public class UserController {
         this.repo = repo;
     }
 
+    @SuppressWarnings("null")
     @PostMapping("/addUser")
     public User addUser(@RequestBody User user) {
         return repo.save(user);

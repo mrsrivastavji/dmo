@@ -1,7 +1,22 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AdminLogin from './AdminLogin';
+import CustomerLogin from './CustomerLogin';
 import { useState, useEffect } from 'react';
 
 function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/customer/login" element={<CustomerLogin />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+}
+
+function Home() {
   const [products, setProducts] = useState([]);
   const [formData, setFormData] = useState({ name: '', price: '' });
   const [loading, setLoading] = useState(false);
@@ -91,8 +106,7 @@ function App() {
           </div>
           <div className="header-actions">
             <div className="account">
-              <span>Hello, sign in</span>
-              <span>Account & Lists</span>
+              <a href="/customer/login">Customer Login</a> | <a href="/admin/login">Admin Login</a>
             </div>
             <div className="returns">
               <span>Returns</span>

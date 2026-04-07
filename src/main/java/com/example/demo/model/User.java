@@ -10,6 +10,9 @@ public class User {
     private int id;
 
     private String name;
+    private String email;
+    private String password;
+    private String role; // "ADMIN" or "CUSTOMER"
 
     // Getter
     public int getId() {
@@ -29,5 +32,35 @@ public class User {
     // Setter
     public void setName(String name) {
         this.name = name;
+    }
+
+    // Getter
+    public String getEmail() {
+        return email;
+    }
+
+    // Setter
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Getter
+    public String getPassword() {
+        return password;
+    }
+
+    // Setter
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Getter
+    public String getRole() {
+        return role;
+    }
+
+    // Setter
+    public void setRole(String role) {
+        this.role = role;
     }
 }
